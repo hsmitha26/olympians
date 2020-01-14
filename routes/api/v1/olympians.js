@@ -21,6 +21,20 @@ router.get('/', (request, response) => {
             response.status(200).send({youngestOlympian})
           })
       })
+  } else if (age === 'oldest') {
+    database('olympians')
+      .max('age')
+      .first()
+      .then(maxAge => {
+        database('olympians')
+          .where('age', maxAge.max)
+          .select('name', 'team', 'age', 'sport')
+          .groupBy('name', 'team', 'age', 'sport')
+          .count('medal as total_medals_won')
+          .then(oldestOlympian => {
+            response.status(200).send({oldestOlympian})
+          })
+      })
   } else {
     database('olympians')
       .select('name', 'team', 'age', 'sport')
