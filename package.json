@@ -17,7 +17,8 @@
     "knex": "^0.20.7",
     "knex-seeder": "^0.1.1",
     "path": "^0.12.7",
-    "pg": "^7.17.1"
+    "pg": "^7.17.1",
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "babel-jest": "^24.9.0",
