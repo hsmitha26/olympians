@@ -9,6 +9,7 @@ const database = require('knex')(configuration);
 describe('Test GET api/v1/olympians', () => {
   beforeEach(async () => {
      await database.raw('truncate table olympians cascade');
+     // insert test data here
    })
     it('should get all olympians', async() => {
       const res = await request(app).get("/api/v1/olympians")
@@ -17,7 +18,7 @@ describe('Test GET api/v1/olympians', () => {
 
       expect(res.body).toHaveProperty('olympians')
 
-      // console.log(res.body)
+      console.log(res.body)
       // expect(res.body.olympians[0]).toHaveProperty('name')
 
       // expect(res.body.olympians[0]).toHaveProperty('team')
