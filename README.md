@@ -38,9 +38,8 @@ In Postman, append the (local or production) url to expose the below endpoints o
 
 ## Endpoints
 
-<details>
-<summary>GET api/v1/olympians</summary>
-####Response:
+### GET api/v1/olympians
+#### Response:
   ```
   {
   "olympians":
@@ -63,11 +62,9 @@ In Postman, append the (local or production) url to expose the below endpoints o
     ]
   }
   ```
-</details>
 
-<details>
-<summary>GET api/v1/olympians?age=youngest</summary>
-####Response:
+### GET api/v1/olympians?age=youngest
+#### Response:
 ```
 {
     "youngestOlympian": [
@@ -83,9 +80,8 @@ In Postman, append the (local or production) url to expose the below endpoints o
 ```
 </details>
 
-<details>
-<summary>GET api/v1/olympians?age=oldest</summary>
-####Response:
+### GET api/v1/olympians?age=oldest
+#### Response:
 ```
 {
     "oldestOlympian": [
@@ -99,11 +95,9 @@ In Postman, append the (local or production) url to expose the below endpoints o
     ]
 }
 ```
-</details>
 
-<details>
-<summary>GET api/v1/olympian_stats</summary>
-####Response:
+### GET api/v1/olympian_stats
+#### Response:
 ```
 {
     "olympian_stats": {
@@ -114,8 +108,7 @@ In Postman, append the (local or production) url to expose the below endpoints o
     }
 }
 ```
-</details>
 
-##Known Issues
+## Known Issues
 * Currently a successful response is not an exact match to the spec. After adding serializer and implementing MVC design pattern, this issue will be resolved.
 * Error messages will be added at a later time.
